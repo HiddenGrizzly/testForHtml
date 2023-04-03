@@ -1,7 +1,7 @@
 .parent{
     display: grid;
     height: 100%;
-    background-image: "/Img/background";
+    background-image: url("testForHtml\img\background.jpg");
 }
 header {
     padding: 2rem;
