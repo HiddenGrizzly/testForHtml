@@ -4,25 +4,29 @@
     width: 100%;
     background-image: url("background.jpg");
     background-color: aqua;
-    color: red;
 }
 header {
     padding: 2rem;
     grid-column: 1/4;
+    color: blanchedalmond;
 }
 .left-side {
     grid-column: 1/2;
+    color: aqua;
 }
 main{
     grid-column: 2/3;
+    color: brown;
 }
 .right-side {
     grid-column: 3/4;
+    color: crimson;
 }
 footer{
     grid-column: 1/4;
     font-size: 1.5rem;
     padding: 1rem;
+    color: cyan;
 }
 body{
     display: grid;
