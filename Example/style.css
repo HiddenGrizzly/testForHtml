@@ -4,6 +4,7 @@
     width: 100%;
     background-image: url("background.jpg");
     background-color: aqua;
+    color: red;
 }
 header {
     padding: 2rem;
