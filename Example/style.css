@@ -2,7 +2,7 @@
     display: grid;
     height: 100%;
     width: 100%;
-    background-color: green;
+    background-color: rgb(155, 206, 155);
 }
 header {
     padding: 2rem;
