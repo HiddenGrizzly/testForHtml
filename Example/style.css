@@ -2,6 +2,7 @@
     display: grid;
     height: 100%;
     background-image: url("testForHtml\img\background.jpg");
+    background-color: aliceblue;
 }
 header {
     padding: 2rem;
