@@ -5,13 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS</title>
+    <script>
+        function changeP() {
+            document.getElementById('para').innerHTML='Toi da thay doi.';
+        }
+    </script>
 </head>
 <body>
+    <!--Introduction--> 
     <p id="change">Click the button</p>
     <button type="button" onclick="document.getElementById('change').innerHTML='You activated my trap!'">Here go nothing!!!</button>
     <br>
     <button type="button" onclick="document.getElementById('hunter').src='fireHunter.png'">Fire hunter</button>
     <img src="fireHunter.png" alt="Hunter" id="hunter" width="200px" height="200px">
-    <button type="button" onclick="document.getElementById('hunter').src='lightHunter.jpg'">Lightning hunter</button>
+    <button type="button" onclick="document.getElementById('hunter').src='lightHunter.jpg'">Lightning hunter</button> <br>
+    <p id="boom">BOOM</p>
+    <button type="button" onclick="document.getElementById('boom').style.fontSize='40px'">Bigger!</button>
+    <button type="button" onclick="document.getElementById('boom').style.display='none'">Poof!</button>
+    <button type="button" onclick="document.getElementById('boom').style.display='block'">Appear!</button>
+    <!--Where to-->
+    <p id="testScrift"></p>
+    <script>
+        document.getElementById('testScrift').innerHTML='Doan van ban'
+    </script>
+    <p id="para">Toi se thay doi.</p>
+    <button type="button" onclick="changeP()">Thay doi!</button>
 </body>
 </html>
