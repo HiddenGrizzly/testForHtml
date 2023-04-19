@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        #panel {
+            border: 1px solid red;
+            margin: 30px;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <a href="https://jquery.com/download/">Bait</a>
+    
+    <h1></h1>
+    <script>
+        //Gọi hàm
+        $(document).ready(function(){
+        $('h1').html("Hallo world!");});
+        //Tương tác với Event
+        $(document).ready(function() {
+            $("a").click(function(event){
+                alert("Hello event");
+            })
+        });
+        //$("selector").css("property", "value");
+        $("p").css("color","blue");
+        //Sự kiện
+        $("div").mouseover(function(eventObj){
+            alert("mouseover!" + eventObj.type);
+        });
+        $(document).ready(function(){
+            $("#hello").click(function(){
+                alert($("h1").html());
+            });
+        });
+        $(document).ready(function(){
+            $("#panel").hide();
+            $("button").click(function(){
+                $("#panel").slideToggle();
+            });
+        });
+    </script>
+    <p>What that</p>
+    <button id="hello">-_-</button>
+    <div>nah</div>
+    <h1>Hello</h1>
+    <button>Click</button>
+    <div id="panel">wahhhh</div>
+</body>
+</html>
