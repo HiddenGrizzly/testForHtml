@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fadein/Fadeout</title>
+    <script src="jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            $("#fading").click(function(){
+                $(".faded").fadeToggle(1000);
+            });
+        });
+        $(document).ready(function(){
+            $("#fadingTime").click(function(){
+                $(".fadedTime").fadeTo(1000,0.5);
+            });
+        });
+    </script>
+    <button id="fading">I'm fading!</button>
+    <div class="faded">
+        <p>It golden gun time!</p>
+        <img src="fireHunter.png" alt="Hunter" height="250px" width="250px">
+    </div>
+    <br>
+    <button id="fadingTime">I'm fading! Just a bit.</button>
+    <div class="fadedTime">
+        <p>It lighting time!</p>
+        <img src="lightHunter.jpg" alt="Hunter" height="250px" width="250px">
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <script src="jquery-3.6.4.min.js">
+    </script>
+</head>
+<body>
+    <p id="gone">Gone with the blast wave.</p>
+    <h5 class="touch">Touch me!</h5>
+    <script>
+        $(document).ready(function(){
+            $("#gone").click(function(){
+                $(this).hide();
+            });
+        });
+        $(document).ready(function(){
+            $(".touch").hover(function(){
+                window.alert("Turn me on");
+            },
+            function(){
+                window.alert("Turn me off");
+            });
+        });
+    </script>
+</body>
+</html>
