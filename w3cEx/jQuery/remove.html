@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove</title>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#bre1').click(function(){
+                $('#re1').remove();
+            });
+            $('#bre2').click(function(){
+                $('#re2').empty();
+            });
+            $('#bre3').click(function(){
+                $('p').remove('.some');
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="bre1">Remove all</button>
+    <button id="bre2">Empty</button>
+    <button id="bre3">Remove some</button>
+    <div id="re1" style="height: 200px; width: 400px; background-color: beige;">
+        Remove all
+        <p>A paragraph.</p>
+        <p>Another paragraph.</p>
+    </div>
+    <br>
+    <div id="re2" style="height: 200px; width: 400px; background-color: beige;">
+        Empty me
+        <p>A paragraph.</p>
+        <p>Another paragraph.</p>
+    </div>
+    <br>
+    <div id="re3" style="height: 200px; width: 400px; background-color: beige;">
+        Remove some
+        <p class="some">A test paragraph.</p>
+        <p>Another paragraph.</p>
+    </div>
+</body>
+</html>

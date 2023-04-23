@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#ap').click(function(){
+                $('#apre').append('Append text ');
+            });
+            $('#pr').click(function(){
+                $('#apre').prepend(' Prepend text ');
+            });
+            $('#af').click(function(){
+                $('#beap').after(' After text ');
+            });
+            $('#be').click(function(){
+                $('#beap').before(' Before text ');
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="ap">Append</button>
+    <button id="pr">Prepend</button>
+    <button id="af">After</button>
+    <button id="be">Before</button>
+    <p id="apre">Add in me</p>
+    <p id="beap">Add before and after me</p>
+</body>
+</html>
