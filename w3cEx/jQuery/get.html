@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get</title>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#but1").click(function(){
+                alert("Text: " + $("#target").text());
+            });
+        });
+        $(document).ready(function(){
+            $("#but2").click(function(){
+                alert("HTML: " + $("#target").html());
+            });
+        });
+        $(document).ready(function(){
+            $("#but3").click(function(){
+                alert("Value: " + $("#text").val());
+            });
+        });
+        $(document).ready(function(){
+            $("#but4").click(function(){
+                alert("Attribute name: " + $("#text").attr("name"));
+            });
+        });
+    </script>
+</head>
+<body>
+    <button type="button" id="but1">Text</button>
+    <button type="button" id="but2">HTML</button>
+    <button type="button" id="but3">Value</button>
+    <button type="button" id="but4">Attributes</button>
+    <br>
+    <p id="target">This is a <strong>target</strong>!</p>
+    <input type="text" name="text" id="text" value="Some text">
+</body>
+</html>

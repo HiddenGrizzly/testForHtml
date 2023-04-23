@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set</title>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btest1").click(function(){
+                $("#test1").text("New paragraph!");
+            });
+            $("#btest2").click(function(){
+                $("#test2").html("New <b>paragraph</b>!");
+            });
+            $("#btest3").click(function(){
+                $("#test3").val("Mickey!");
+            });
+            $("#btest4").click(function(){
+                $("#test4").text(function(i, origText){
+                    return "Old text: " + origText + " New text: For new text. (index: " + i + ")";
+                });
+            });
+            $("#btest5").click(function(){
+                $("#test5").html(function(i, origText){
+                    return "Old html: " + origText + " New html: For <b>new html</b>. (index: " + i + ")";
+                });
+            });
+            $("#btest6").click(function(){
+                $("#test6").attr({"href" : "https://www.youtube.com/", "title" : "Youtube"});
+            });
+            $("#btest7").click(function(){
+                $("#test7").attr("href", function(i, origValue){
+                    return origValue + "search?q=dumb";
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btest1">Change text</button>
+    <button id="btest2">Change html</button>
+    <button id="btest3">Change value</button>
+    <button id="btest4">Show old/new text</button>
+    <button id="btest5">Show old/new HTML</button>
+    <button id="btest6">Change link</button>
+    <button id="btest7">Change link callback</button>
+    <p id="test1">A simple paragraph.</p>
+    <p id="test2">A simple <i>paragraph</i>.</p>
+    <input type="text" name="text" id="test3" value="Donal">
+    <br>
+    <p id="test4">For old text.</p>
+    <p id="test5">For <i>old HTML</i>.</p>
+    <a href="https://www.google.com/" id="test6" title="Google">Google</a>
+    <a href="https://www.google.com/" id="test7" title="Google">Google</a>
+</body>
+</html>
