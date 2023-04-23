@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#fading").click(function(){
+                $("#faded").fadeOut(500, function(){
+                    alert("Imgage is faded!");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="fading" type="button">I'm fading!</button>
+    <div id="faded">
+        <p>It golden gun time!</p>
+        <img src="fireHunter.png" alt="Hunter" height="250px" width="250px">
+    </div>
+</body>
+</html>
