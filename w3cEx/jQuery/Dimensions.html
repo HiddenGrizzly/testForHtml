@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensions</title>
+    <style>
+        div {
+            width: 500px;
+            height: 600px;
+            padding: 100px;
+            border: 2px solid red;
+            margin: 50px;
+            background-color: aquamarine;
+        }
+    </style>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var txt = "";
+                txt += "Height: " + $("div").height() + "<br>";
+                txt += "Width: " + $("div").width() + "<br>";
+                txt += "Inner height: " + $("div").innerHeight() + "<br>";
+                txt += "Inner width: " + $("div").innerWidth() + "<br>";
+                txt += "Outer height: " + $("div").outerHeight() + "<br>";
+                txt += "Outer width: " + $("div").outerWidth() + "<br>";
+                txt += "Outer height true: " + $("div").outerHeight(true) +"<br>";
+                txt += "Outer width true: " + $("div").outerWidth(true) + "<br";
+                $("div").html(txt);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+
+    </div>
+    <button>Show me the way!</button>
+</body>
+</html>

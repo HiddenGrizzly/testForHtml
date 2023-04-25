@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Class</title>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $('#p1').addClass('red');
+                $('#p2').addClass('green');
+                $('#p3').addClass('imp');
+            });
+            $('#btn2').click(function(){
+                $('#p1').removeClass('red');
+                $('#p2').removeClass('green');
+                $('#p3').removeClass('imp');
+            });
+            $('#btn3').click(function(){
+                $('#p1').toggleClass('red');
+                $('#p2').toggleClass('green');
+                $('#p3').toggleClass('imp');
+            });
+            $('#btn4').click(function(){
+                $('#p4').css({'color' : 'blue', 'font-size' : '40px'});
+            });
+            $('#btn5').click(function(){
+                alert('Color = ' + $('#p4').css('color'));
+            });
+        });
+    </script>
+    <style>
+        .imp {
+            font-weight: bold;
+            font-size: xx-large;
+        }
+        .red {
+            color: red;
+        }
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">Add class</button>
+    <button id="btn2">Remove class</button>
+    <button id="btn3">Toggle class</button>
+    <button id="btn4">Add css</button>
+    <button id="btn5">Return css color</button>
+    <br>
+    <p id="p1">I will be red.</p>
+    <p id="p2">I will be green.</p>
+    <p id="p3">I will be bold.</p>
+    <p id="p4">Change me!</p>
+</body>
+</html>
