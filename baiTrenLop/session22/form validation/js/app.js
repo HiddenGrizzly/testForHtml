@@ -83,3 +83,28 @@ const isPasswordSecure = (password) => {
 
 const isRequired = value => value === "" ? false : true;
 const isBetween =(length, min, max) => length < min || length > max ? false : true;
+
+const showError = (input, message) => {
+    //Get the form-field element
+    const formField = input.parentElement;
+    //Add the error class
+    formField.classList.remove('success');
+    formField.classList.add('error');
+
+    // Show the error message
+    const error = formField.querySelector('small');
+    error.textContent = message;
+};
+
+const showSuccess = (input) => {
+    //Get the form-field element
+    const formField = input.parentElement;
+
+    //Remove the error class
+    formField.classList.remove('error');
+    formField.classList.add('success');
+
+    //Hide the error message
+    const error = formField.querySelector('small');
+    error.textContent = '';
+};
